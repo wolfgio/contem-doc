@@ -1,26 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// @flow
+import React, { PureComponent } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
 
-class App extends Component {
+import LoginPage from './Pages/Login';
+
+type Props = {};
+type State = { isLogged: Boolean };
+class App extends PureComponent<Props, State> {
+  constructor(props) {
+    super(props);
+    this.state = { isLogged: false };
+  }
+
   render() {
+    const { isLogged } = this.state;
+    if (!isLogged) return <LoginPage />;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <Route exact path="/" />
+      </Router>
     );
   }
 }

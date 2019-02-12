@@ -1,0 +1,12 @@
+{
+  "extends": ["airbnb", "plugin:flowtype/recommended"],
+  "env": {
+      "jest": true
+  },
+  "plugins": [
+    "flowtype"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}
