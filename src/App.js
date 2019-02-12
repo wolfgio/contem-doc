@@ -1,28 +1,37 @@
 // @flow
 import React, { PureComponent } from 'react';
+import { Provider } from 'react-redux';
+
 import {
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
 
-import LoginPage from './Pages/Login';
+import createStore from './Redux/store';
 
 type Props = {};
 type State = { isLogged: Boolean };
+
+const Home = () => (
+  <div>
+    <h1>React Bootstrap</h1>
+  </div>
+);
 class App extends PureComponent<Props, State> {
   constructor(props) {
     super(props);
-    this.state = { isLogged: false };
+    this.state = {};
   }
 
   render() {
-    const { isLogged } = this.state;
-    if (!isLogged) return <LoginPage />;
+    const store = createStore();
 
     return (
-      <Router>
-        <Route exact path="/" />
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Route exact path="/" component={Home} />
+        </Router>
+      </Provider>
     );
   }
 }
