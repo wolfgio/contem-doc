@@ -10,7 +10,7 @@ import {
 import createStore from './Redux/store';
 
 type Props = {};
-type State = { isLogged: Boolean };
+type State = {};
 
 const Home = () => (
   <div>
