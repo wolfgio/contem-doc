@@ -26,9 +26,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "flow": "flow",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "flow": "flow"
   },
   "eslintConfig": {
     "extends": "react-app"
