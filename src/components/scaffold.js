@@ -22,7 +22,7 @@ const Scaffold = (props: any) => {
             <span>Meus documentos</span>
           </Menu.Item>
           <Menu.Item key="2">
-            <Icon type="file-protect" />
+            <Icon type="user-add" />
             <span>Atracamentos</span>
           </Menu.Item>
         </Menu>
