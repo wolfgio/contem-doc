@@ -16,6 +16,7 @@ import createStore from './Redux/store';
 import Home from './pages/home/Home';
 import Terminal from './pages/Terminal';
 import Desembaraco from './pages/Desembaraco';
+import MapScreen from './pages/Terminal/Map';
 
 type Props = {};
 type State = {};
@@ -36,6 +37,7 @@ class App extends PureComponent<Props, State> {
             <Route exact path="/" component={Home} />
             <Route exact path="/terminal" component={Terminal} />
             <Route exact path="/desembaraco" component={Desembaraco} />
+            <Route exact path="/map" component={MapScreen} />
           </Switch>
         </Router>
       </Provider>
