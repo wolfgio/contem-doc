@@ -62,7 +62,7 @@ export default function Terminal() {
           <Typography.Title
             style={{
               fontSize: '14px',
-              color: '#04c3d9',
+              color: 'rgba(0, 0, 0, 0.4)',
             }}
           >
             CARTÃO CNPJ
