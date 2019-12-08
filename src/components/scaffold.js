@@ -14,9 +14,9 @@ const Scaffold = (props: any) => {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
+      <Sider style={{ backgroundColor: '#044872' }} theme="dark" collapsible collapsed={collapsed} onCollapse={onCollapse}>
         <Logo />
-        <Menu theme="dark" defaultSelectedKeys={[selectedKey]} mode="inline">
+        <Menu style={{ backgroundColor: '#044872' }} theme="dark" defaultSelectedKeys={[selectedKey]} mode="inline">
           <Menu.Item key="1">
             <Icon type="file-protect" />
             <span>Meus documentos</span>
