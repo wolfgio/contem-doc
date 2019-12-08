@@ -14,9 +14,9 @@ const Scaffold = (props: any) => {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
+      <Sider style={{ backgroundColor: '#044872' }} theme="dark" collapsible collapsed={collapsed} onCollapse={onCollapse}>
         <Logo />
-        <Menu theme="dark" defaultSelectedKeys={[selectedKey]} mode="inline">
+        <Menu style={{ backgroundColor: '#044872' }} theme="dark" defaultSelectedKeys={[selectedKey]} mode="inline">
           <Menu.Item key="1">
             <Icon type="file-protect" />
             <span>Meus documentos</span>
@@ -28,10 +28,10 @@ const Scaffold = (props: any) => {
         </Menu>
       </Sider>
       <Layout>
-        <Content style={{ padding: '24px', backgroundColor: '#FFF' }}>
+        <Content style={{ padding: '24px', backgroundColor: '#bbcdd9' }}>
           {children}
         </Content>
-        <Footer style={{ textAlign: 'center', backgroundColor: '#FFF' }}>Contem Doc ©2019</Footer>
+        <Footer style={{ textAlign: 'center', backgroundColor: '#bbcdd9' }}>Contem Doc ©2019</Footer>
       </Layout>
     </Layout>
   );

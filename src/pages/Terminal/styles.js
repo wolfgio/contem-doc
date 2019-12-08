@@ -16,6 +16,8 @@ box-shadow: -10px -19px 36px -30px rgba(0,0,0,0.58);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  background-color: rgba(255,255,255, 0.8);
+
 `;
 
 export const MainContainer = styled.div`
