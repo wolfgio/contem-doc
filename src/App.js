@@ -9,14 +9,11 @@ import {
 
 import createStore from './Redux/store';
 
+import Home from './pages/home/Home';
+
 type Props = {};
 type State = {};
 
-const Home = () => (
-  <div>
-    <h1>React Bootstrap</h1>
-  </div>
-);
 class App extends PureComponent<Props, State> {
   constructor(props) {
     super(props);

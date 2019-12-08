@@ -1,2 +1,4 @@
 2019-02-12 12:04:43.568 -02 [2501] FATAL:  lock file "postmaster.pid" already exists
 2019-02-12 12:04:43.568 -02 [2501] HINT:  Is another postmaster (PID 1055) running in data directory "/Users/giovannypiovesan/.asdf/installs/postgres/10.5/data"?
+2019-12-08 04:24:43.732 -02 [18462] FATAL:  lock file "postmaster.pid" already exists
+2019-12-08 04:24:43.732 -02 [18462] HINT:  Is another postmaster (PID 801) running in data directory "/Users/giovannypiovesan/.asdf/installs/postgres/10.5/data"?
