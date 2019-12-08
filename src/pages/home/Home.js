@@ -1,24 +1,56 @@
-import * as React from "react";
-import { Typography, Row, Col , Table, Divider, Tag} from "antd";
+import * as React from 'react';
+import {
+  Typography,
+  Table,
+  Tag,
+} from 'antd';
 
-import Scaffold from "../../components/scaffold";
+import { Link } from 'react-router-dom';
+
+import { CompanyLogo } from './styles';
+import Scaffold from '../../components/scaffold';
+
+import BTP from '../../assets/icons/btp.png';
+import DPW from '../../assets/icons/dpw.png';
+import ECO from '../../assets/icons/eco.png';
+import SBP from '../../assets/icons/sbp.png';
+import TRB from '../../assets/icons/trb.png';
 
 const columns = [
   {
-    title: 'Name',
+    title: '',
+    width: '60px',
+    render: (record) => {
+      switch (record.name) {
+        case 'BTP':
+          return (
+            <CompanyLogo src={BTP} />
+          );
+        case 'DPW':
+          return (
+            <CompanyLogo src={DPW} />
+          );
+        case 'ECO':
+          return (
+            <CompanyLogo src={ECO} />
+          );
+        case 'SBP':
+          return (
+            <CompanyLogo src={SBP} />
+          );
+        case 'TRB':
+          return (
+            <CompanyLogo src={TRB} />
+          );
+        default:
+          return null;
+      }
+    },
+  },
+  {
+    title: 'Terminal',
     dataIndex: 'name',
     key: 'name',
-    render: text => <a>{text}</a>,
-  },
-  {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
-  },
-  {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
   },
   {
     title: 'Tags',
@@ -26,7 +58,7 @@ const columns = [
     dataIndex: 'tags',
     render: tags => (
       <span>
-        {tags.map(tag => {
+        {tags.map((tag) => {
           let color = tag.length > 5 ? 'geekblue' : 'green';
           if (tag === 'Aguardando Documentação') {
             color = 'volcano';
@@ -47,13 +79,12 @@ const columns = [
     ),
   },
   {
-    title: 'Action',
+    title: 'Ações',
     key: 'action',
-    render: (text, record) => (
+    align: 'center',
+    render: () => (
       <span>
-        <a>Invite {record.name}</a>
-        <Divider type="vertical" />
-        <a>Delete</a>
+        <Link to="/terminal">Enviar documentos</Link>
       </span>
     ),
   },
@@ -62,23 +93,27 @@ const columns = [
 const data = [
   {
     key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
+    name: 'BTP',
     tags: ['Aguardando Documentação'],
   },
   {
     key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
+    name: 'DPW',
     tags: ['Documentos Ok'],
   },
   {
     key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
+    name: 'ECO',
+    tags: ['Data em atraso'],
+  },
+  {
+    key: '4',
+    name: 'TRB',
+    tags: ['Data em atraso'],
+  },
+  {
+    key: '5',
+    name: 'SBP',
     tags: ['Data em atraso'],
   },
 ];
@@ -87,11 +122,7 @@ const data = [
 const Home = () => (
   <Scaffold>
     <Typography.Title>Terminais</Typography.Title>
-    <Row>
-      <Col span={12}>
-      <Table columns={columns} dataSource={data} />
-      </Col>
-    </Row>
+    <Table columns={columns} dataSource={data} />
   </Scaffold>
 );
 
