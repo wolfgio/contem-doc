@@ -7,7 +7,7 @@ import './style.css';
 
 import {
   BrowserRouter as Router,
-  Switch, 
+  Switch,
   Route,
 
 } from 'react-router-dom';
