@@ -27,6 +27,8 @@ class App extends PureComponent<Props, State> {
       <Provider store={store}>
         <Router>
           <Route exact path="/" component={Home} />
+          <Route exact path="/terminal" component={Terminal} />
+          <Route exact path="/terminal" component={Terminal} />
         </Router>
       </Provider>
     );
