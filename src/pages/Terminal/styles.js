@@ -6,18 +6,15 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  -webkit-box-shadow: -10px -19px 36px -30px rgba(0,0,0,0.58);
--moz-box-shadow: -10px -19px 36px -30px rgba(0,0,0,0.58);
-box-shadow: -10px -19px 36px -30px rgba(0,0,0,0.58);
-  border-radius: 10px;
-  border: 1px solid lightgray;
+  box-shadow: -10px -19px 36px -30px rgba(0,0,0,0.58);
+  border-radius: 14px;
   height: auto;
   padding: 1em;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background-color: rgba(255,255,255, 0.8);
-
+  background-color: #FFF;
+  transition: all 1s;
 `;
 
 export const MainContainer = styled.div`

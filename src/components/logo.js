@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import LogoIcon from '../assets/icons/logo.png';
+import LogoIcon from '../assets/icons/icon.jpeg';
 
 const Logo = styled.img`
   height: 32px;

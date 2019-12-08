@@ -17,14 +17,15 @@ export default function Terminal() {
 
   return (
     <Scaffold>
-      <Typography.Title>Documentos para Operação</Typography.Title>
+      <Typography.Title style={{ color: '#04c3d9'}}>Documentos para Operação</Typography.Title>
 
       <MainContainer>
         {textData.map(data => (
           <Card extra={<Icon type="check" fill="green" />}>
             <Typography.Title
               style={{
-                fontSize: "14px"
+                fontSize: '14px',
+                color: 'rgba(0, 0, 0, 0.4)',
               }}
             >
               {data.title}
@@ -60,21 +61,19 @@ export default function Terminal() {
         <Card title="Titulo">
           <Typography.Title
             style={{
-              fontSize: "18px"
+              fontSize: '14px',
+              color: '#04c3d9',
             }}
           >
             CARTÃO CNPJ
           </Typography.Title>
-          <Divider />
+          <Divider style={{ marginBottom: 0 }} />
           <Row>
-            <Tag color="green">ANTAC</Tag>
-            <Tag color="yellow">ANVISA</Tag>
-            <Tag color="red">CODESP</Tag>
-          </Row>
-          <div style={{ height: 8 }} />
-          <Row>
-            <Tag color="red">RECEITA FEDERAL</Tag>
-            <Tag color="green">VIGIAGRO</Tag>
+            <Tag style={{ marginRight: "10px", marginTop: "10px" }} color="green">ANTAC</Tag>
+            <Tag style={{ marginRight: "10px", marginTop: "10px" }} color="yellow">ANVISA</Tag>
+            <Tag style={{ marginRight: "10px", marginTop: "10px" }} color="red">CODESP</Tag>
+            <Tag style={{ marginRight: "10px", marginTop: "10px" }} color="red">RECEITA FEDERAL</Tag>
+            <Tag style={{ marginRight: "10px", marginTop: "10px" }} color="green">VIGIAGRO</Tag>
           </Row>
           <Divider />
           <Row gutter={[16, 16]} style={{ margin: 0 , position: 'relative'}}>
