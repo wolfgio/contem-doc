@@ -139,7 +139,7 @@ const Home = () => {
   ];
 
   return (
-    <Scaffold>
+    <Scaffold selectedKey="2">
       <Typography.Title>Terminais</Typography.Title>
       <Table columns={columns} dataSource={data} />
       <Modal
