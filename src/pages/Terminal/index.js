@@ -8,6 +8,7 @@ import {
   Icon,
   Upload,
   Button,
+  Divider,
 } from 'antd';
 
 import Scaffold from '../../components/scaffold';
@@ -22,7 +23,7 @@ export default function Terminal() {
   return (
     <Scaffold>
       <Typography.Title>
-        Terminal
+        Documentos
       </Typography.Title>
       <Row gutter={[16, 16]}>
         <Col span={8}>
@@ -101,7 +102,7 @@ export default function Terminal() {
           >
             <Row>
               <Tag color="green">ANTAC</Tag>
-              <Tag color="green">ANVISA</Tag>
+              <Tag color="yellow">ANVISA</Tag>
               <Tag color="red">CODESP</Tag>
             </Row>
             <div style={{ height: 8 }} />
@@ -109,17 +110,18 @@ export default function Terminal() {
               <Tag color="red">RECEITA FEDERAL</Tag>
               <Tag color="green">Vigiagro</Tag>
             </Row>
+            <Divider />
+            <Row gutter={[16, 16]}>
+              <Col>
+                <Upload {...props}>
+                  <Button size="small">
+                    <Icon type="upload" />
+                    Enviar documentos
+                  </Button>
+                </Upload>
+              </Col>
+            </Row>
           </Card>
-        </Col>
-      </Row>
-      <Row gutter={[16, 16]}>
-        <Col span={12}>
-          <Upload {...props}>
-            <Button>
-              <Icon type="upload" />
-              Enviar documentos
-            </Button>
-          </Upload>
         </Col>
       </Row>
     </Scaffold>
