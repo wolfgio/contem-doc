@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { Layout, Menu, Icon } from 'antd';
+import { Link } from 'react-router-dom';
 
 import Logo from './logo';
 
@@ -18,12 +19,22 @@ const Scaffold = (props: any) => {
         <Logo />
         <Menu style={{ backgroundColor: '#044872' }} theme="dark" defaultSelectedKeys={[selectedKey]} mode="inline">
           <Menu.Item key="1">
-            <Icon type="file-protect" />
-            <span>Meus documentos</span>
+            <Link to="/map">
+              <Icon type="file-protect" />
+              <span>Dashboard</span>
+            </Link>
           </Menu.Item>
           <Menu.Item key="2">
-            <Icon type="user-add" />
-            <span>Atracamentos</span>
+            <Link to="/">
+              <Icon type="file-protect" />
+              <span>Terminais</span>
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="3">
+            <Link to="/terminal">
+              <Icon type="file-protect" />
+              <span>Documentos</span>
+            </Link>
           </Menu.Item>
         </Menu>
       </Sider>
@@ -31,7 +42,7 @@ const Scaffold = (props: any) => {
         <Content style={{ padding: '24px', backgroundColor: '#FAFAFA' }}>
           {children}
         </Content>
-        <Footer style={{ textAlign: 'center', backgroundColor: '#FAFAFA' }}>Contem Doc ©2019</Footer>
+        <Footer style={{ textAlign: 'center', backgroundColor: '#FAFAFA' }}>contemDoc ©2019</Footer>
       </Layout>
     </Layout>
   );

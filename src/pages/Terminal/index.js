@@ -36,7 +36,7 @@ class Terminal extends React.PureComponent {
   render() {
     const { files, showModal } = this.state;
     return (
-      <Scaffold>
+      <Scaffold selectedKey="3">
         <Typography.Title style={{ color: '#04c3d9' }}>Documentos para Operação</Typography.Title>
         <MainContainer>
           {this.textData.map(item => (
