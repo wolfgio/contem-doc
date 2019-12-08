@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react';
 import { Provider } from 'react-redux';
+import { createBrowserHistory } from 'history';
 
 import './style.css';
 
@@ -20,6 +21,8 @@ import Desembaraco from './pages/Desembaraco';
 type Props = {};
 type State = {};
 
+const history = createBrowserHistory();
+
 class App extends PureComponent<Props, State> {
   constructor(props) {
     super(props);
@@ -31,7 +34,7 @@ class App extends PureComponent<Props, State> {
 
     return (
       <Provider store={store}>
-        <Router>
+        <Router history={history}>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/terminal" component={Terminal} />
