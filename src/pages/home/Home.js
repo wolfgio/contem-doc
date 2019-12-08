@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { Typography } from 'antd';
 
 import Scaffold from '../../components/scaffold';
 
 const Home = () => (
   <Scaffold>
-    <h1>Oi</h1>
+    <Typography.Title>Oi</Typography.Title>
   </Scaffold>
 );
 
