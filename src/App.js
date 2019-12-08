@@ -6,10 +6,7 @@ import './style.css';
 
 import {
   BrowserRouter as Router,
-<<<<<<< Updated upstream
-=======
   Switch,
->>>>>>> Stashed changes
   Route,
 } from 'react-router-dom';
 

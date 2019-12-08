@@ -28,10 +28,10 @@ const Scaffold = (props: any) => {
         </Menu>
       </Sider>
       <Layout>
-        <Content style={{ padding: '24px', backgroundColor: '#FFF' }}>
+        <Content style={{ padding: '24px', backgroundColor: '#bbcdd9' }}>
           {children}
         </Content>
-        <Footer style={{ textAlign: 'center', backgroundColor: '#FFF' }}>Contem Doc ©2019</Footer>
+        <Footer style={{ textAlign: 'center', backgroundColor: '#bbcdd9' }}>Contem Doc ©2019</Footer>
       </Layout>
     </Layout>
   );
